@@ -1,4 +1,4 @@
-# V1 design brief: Bench Board
+# Design brief: Bench Board
 
 ## Look
 - **Mood:** a lab bench at night. Dark UI, one bright accent, numbers front and centre. It matches the channel's video style, so viewers recognise it.
@@ -15,7 +15,7 @@
   - Inter for UI: H1 56/64 bold, H2 32/40 semibold, body 16/24, small 13/18.
   - Liberation Mono for numbers (tok/s, scores).
 - **Grid:** desktop 1440 wide, 12 columns, 80 margin, 24 gutter. Mobile 390 wide, 4 columns, 16 margin.
-- **Radius** 12. **Spacing** on a 4/8 scale. Everything uses auto layout, so V3's code export stays clean.
+- **Radius** 12. **Spacing** on a 4/8 scale. Everything uses auto layout, so the code export stays clean.
 
 ## Components (built first, reused on every page)
 - **Nav bar:** logo slot, links (Home, Leaderboard, Request a test), active-link underline. Variants: desktop / mobile (hamburger).
@@ -34,7 +34,7 @@
    - **Basic animation:** the hero text and cards fade and slide up on load, staggered.
 2. **Leaderboard**
    - Tabs: Speed (tok/s) / Vision score.
-   - **Complex animation, the race:** bars start at 0, grow to their values, then reorder by rank. Numbers count up in the real site (V3); in the prototype they switch from 0 to the value. Clicking a bar expands a details card with Smart-Animate.
+   - **Complex animation, the race:** bars start at 0, grow to their values, then reorder by rank. Numbers count up in the real site; in the prototype they switch from 0 to the value. Clicking a bar expands a details card with Smart-Animate.
    - Data comes from the real `runs/2026-10-16/results.json` speeds (LFM2.5 121.2, Nemotron 79.0, Gemma 4 63.6, gpt-oss 61.9, Qwen 3.8 23.6 tok/s), so it's honest.
 3. **Request a test**
    - Form: name, email, model to test, hardware (select), what to test (text area), screenshot (drop zone), submit.
@@ -50,13 +50,3 @@
 ## Logo (PhotoCraft)
 - A simple mark: a bench/bar-chart glyph (three rising bars on a desk line) in amber on dark, plus the "Bench Board" wordmark.
 - Exports: 512 px PNG with transparency, a 32 px favicon, and a light-background version.
-- V1's story: build and play the prototype with a placeholder logo box, then drop in the real logo and play it again.
-
-## What we film (V1 outline, newbie voice)
-1. What we're building over the series (show the 3-page sketch), and why it's all local.
-2. What FigCraft and PhotoCraft are, and how to get them. On your laptop: the installer. Here: a container, and a short note on why.
-3. FigCraft tour: frames, auto layout, components, styles.
-4. Build the components, then the 3 pages.
-5. Prototype the flows, then **play the prototype**.
-6. PhotoCraft: make the logo.
-7. Drop the logo in, then **play the prototype again**. Teaser for V2.
