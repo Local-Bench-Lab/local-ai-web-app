@@ -1,27 +1,24 @@
 # Building a Web App with Local AI Models & Apps
 
-The prompts, agents and scripts from my YouTube series, where local AI models build a full web app (Bench Board) on an NVIDIA DGX Spark GB10. Everything runs on the machine: Ollama, OpenCode, Pi, FigCraft, Postgres, and Floci for the cloud episodes. No cloud AI.
+Everything you need to follow my YouTube series, where local AI models build a full web app (Bench Board) on an NVIDIA DGX Spark GB10. No cloud AI: Ollama, OpenCode, FigCraft, Postgres, and Floci for the cloud episodes.
 
 Channel: https://www.youtube.com/channel/UCR1YydvrN6VTtWUGHH2mTSg (playlist "Building a Web App with Local AI Models & Apps")
 
-| Folder | Episode | What's inside |
-|---|---|---|
-| [ep01-design](ep01-design) | [Ep 1: Design](https://youtu.be/xFcJaLkPAKo) | The design brief, and the prompts I gave a local model to drive FigCraft |
-| [ep02-agent-setup](ep02-agent-setup) | [Ep 2: OpenCode + Ollama agents](https://youtu.be/7I02-5ohqOo) | Ollama Modelfiles (128k context), the OpenCode config (models, image input, MCP servers) |
-| [ep03-agent-team](ep03-agent-team) | [Ep 3: A team of 12 local AI agents](https://youtu.be/L1yxuCVJEho) | The 12 agent files, AGENTS.md, the skills, and the judge prompt that picks the next agent |
-| [ep04-frontend-1](ep04-frontend-1) | [Ep 4: Local AI builds the frontend](https://youtu.be/ygrqkF7pN4g) | Every prompt as a run script, and the app design brief the agents read |
-| [ep05-frontend-2](ep05-frontend-2) | Ep 5: Animations, tests, accessibility, speed | Run scripts for the race animation, form states, tests, accessibility and performance |
-| [ep06-backend-1](ep06-backend-1) | Ep 6: Backend part 1, Postgres + a database | Postgres and npm installs, the API design and contract prompts, the contract the model wrote |
+## Follow along
 
-More folders are added as the episodes come out.
+1. **Ep 1:** the design. Open [`app-starter/bench-board.figcraft`](app-starter) in FigCraft, or design your own from [`ep01-design/design-brief.md`](ep01-design/design-brief.md).
+2. **Ep 2:** set up the models and OpenCode: [`ep02-agent-setup`](ep02-agent-setup).
+3. **Ep 3:** add the agent team to your app folder: [`ep03-agent-team`](ep03-agent-team).
+4. **Ep 4 onwards:** create the app, copy `app-starter/design` and `app-starter/data` into it, then follow each episode's `steps.md`.
 
-## How the run scripts work
+| Folder | Episode |
+|---|---|
+| [ep01-design](ep01-design) | [Ep 1: Design](https://youtu.be/xFcJaLkPAKo) |
+| [ep02-agent-setup](ep02-agent-setup) | [Ep 2: OpenCode + Ollama agents](https://youtu.be/7I02-5ohqOo) |
+| [ep03-agent-team](ep03-agent-team) | [Ep 3: A team of 12 local AI agents](https://youtu.be/L1yxuCVJEho) |
+| [ep04-frontend-1](ep04-frontend-1) | [Ep 4: Local AI builds the frontend](https://youtu.be/ygrqkF7pN4g) |
+| [ep05-frontend-2](ep05-frontend-2) | Ep 5: Animations, tests, accessibility, speed |
+| [ep06-backend-1](ep06-backend-1) | Ep 6: Backend part 1, Postgres + a database |
+| [app-starter](app-starter) | The design images, design brief, benchmark data and FigCraft file the prompts use |
 
-Each `runs/*.sh` file is one recorded session: a list of `opencode run --agent <name> "<prompt>"` steps, with `time` in front so you see how long each model took. The prompts in these files are exactly what the models got on camera.
-
-My setup, if you want to follow along:
-- Ollama with 128k-context copies of `qwen3.8:27b`, `gpt-oss:120b` and `gemma4` (see `ep02-agent-setup/modelfiles`).
-- OpenCode runs inside a Docker container with no access to my home files. The `opencode-wrapper.sh` files show how: they call `docker exec` into that container. Without Docker, put `opencode` on your PATH and run the scripts from the app folder.
-- Secrets (the database password) live in an env file that is never committed or printed.
-
-Results are real and include the failures. The numbers in each episode's description come from these runs.
+The prompts are exactly what the models got on camera. Failed attempts are included and marked.

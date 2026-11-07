@@ -2,5 +2,6 @@
 
 Video: https://youtu.be/xFcJaLkPAKo
 
-- `design-brief.md`: the brief for Bench Board (colours, type, grid, components, the three pages). I designed it by hand in FigCraft from this.
-- `local-agent-prompts/`: one prompt per design step that I gave a local model (through FigCraft's MCP server). Honest result: local models could do simple steps, but not the full design. That's why the episode's design was made by hand.
+- `design-brief.md`: the brief I designed Bench Board from, by hand in FigCraft.
+- The finished design file is [`../app-starter/bench-board.figcraft`](../app-starter/bench-board.figcraft); the page images are in [`../app-starter/design`](../app-starter/design).
+- `local-agent-prompts/`: **failed attempt.** One prompt per design step for a local model driving FigCraft over MCP.

@@ -1,0 +1,361 @@
+{
+ "date": "2026-10-16",
+ "machine": "NVIDIA GB10, 128 GB",
+ "rows": [
+  {
+   "model": "hf.co/LiquidAI/LFM2.5-24B-A2B-GGUF:Q4_K_M",
+   "load_s": 6.3,
+   "mem_gb": 16.5,
+   "gen_tps": 121.2,
+   "prompt_tps": 5059.0,
+   "score": 11,
+   "of": 12,
+   "tasks": [
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "36"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "372"
+    },
+    {
+     "cat": "math",
+     "ok": false,
+     "answer": ""
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "Chen"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "No"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "{\"name\": \"Priya\", \"city\": \"Pune\", \"year\": 2019}"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "23, 29, 31, 37"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "DEEP BLUE OCEAN"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "ananab"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "def is_palindrome(s):\n    cleaned = ''.join(c.lower() for c in s if c.isalpha())\n    return cleaned == cleaned[::-1]"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "def second_largest(nums):\n    distinct = sorted(set(nums), reverse=True)\n    return distinct[1] if len(distinct) > 1 else None"
+    },
+    {
+     "cat": "reason",
+     "ok": true,
+     "answer": "4"
+    }
+   ]
+  },
+  {
+   "model": "gpt-oss:20b",
+   "load_s": 6.3,
+   "mem_gb": 13.3,
+   "gen_tps": 61.9,
+   "prompt_tps": 4690.0,
+   "score": 12,
+   "of": 12,
+   "tasks": [
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "36"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "372"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "12:35"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "Chen"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "no"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "{\"name\":\"Priya\",\"city\":\"Pune\",\"year\":\"2019\"}"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "23, 29, 31, 37"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "WAVES TIDES SALT"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "ananab"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "```python\ndef is_palindrome(s):\n    cleaned = ''.join(ch.lower() for ch in s if ch.isalpha())\n    return cleaned == cleaned[::-1]\n```"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "def second_largest(nums):\n    uniq = set(nums)\n    if len(uniq) < 2:\n        return None\n    return sorted(uniq)[-2]"
+    },
+    {
+     "cat": "reason",
+     "ok": true,
+     "answer": "4"
+    }
+   ]
+  },
+  {
+   "model": "qwen3.8:27b",
+   "load_s": 8.7,
+   "mem_gb": 18.0,
+   "gen_tps": 23.6,
+   "prompt_tps": 756.0,
+   "score": 11,
+   "of": 12,
+   "tasks": [
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "36"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "372"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "09:45 + 2 hours = 11:45\n11:45 + 50 minutes = 12:35\n\n12:35"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "Chen"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "no"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "{\"name\": \"Priya\", \"city\": \"Pune\", \"year\": \"2019\"}"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "23, 29, 31, 37"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "SALT WATER WAVE"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "ananab"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "```python\ndef is_palindrome(s):\n    cleaned = [c.lower() for c in s if c.isalpha()]\n    return cleaned == cleaned[::-1]\n```"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "```python\ndef second_largest(nums):\n    distinct = set(nums)\n    if len(distinct) < 2:\n        return None\n    distinct.remove(max(distinct))\n    return max(distinct)\n```"
+    },
+    {
+     "cat": "reason",
+     "ok": false,
+     "answer": "7"
+    }
+   ]
+  },
+  {
+   "model": "nemotron-3-nano:30b",
+   "load_s": 14.8,
+   "mem_gb": 25.0,
+   "gen_tps": 79.0,
+   "prompt_tps": 2799.0,
+   "score": 10,
+   "of": 12,
+   "tasks": [
+    {
+     "cat": "math",
+     "ok": false,
+     "answer": "18"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "372"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "The train departs at **09:45** and the trip takes **2 hours and 50 minutes**.\n\n- Adding 2 hours to 09:45 gives **11:45**.\n- Adding 50 minutes to 11:45 gives **12:35**.\n\nThus, the arrival time is **12:35**.\n\n**Answer:** 12:35"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "Chen"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "No.  \n\n- All bloops are razzies.  \n- No razzies are lazzies (i.e., the sets of razzies and lazzies are disjoint).  \n\nTherefore, any bloop, being a member of the razzies set, cannot also belong to the lazzies set. Hence a bloop cannot be a lazzie."
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "{\n  \"name\": \"Priya\",\n  \"city\": \"Pune\",\n  \"year\": 2019\n}"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "23,29,31,37"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "WAVES CRASH SALT"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "ananab"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "```python\nimport re\n\ndef is_palindrome(s):\n    cleaned = re.sub(r'[^a-z]', '', s.lower())\n    return cleaned == cleaned[::-1]\n```"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "```python\ndef second_largest(nums):\n    largest = second = None\n    for n in nums:\n        if largest is None or n > largest:\n            second = largest\n            largest = n\n        elif n != largest and (second is None or n > second):\n            second = n\n    return second\n```"
+    },
+    {
+     "cat": "reason",
+     "ok": false,
+     "answer": "8"
+    }
+   ]
+  },
+  {
+   "model": "gemma4:latest",
+   "load_s": 8.5,
+   "mem_gb": 3.9,
+   "gen_tps": 63.6,
+   "prompt_tps": 4079.0,
+   "score": 10,
+   "of": 12,
+   "tasks": [
+    {
+     "cat": "math",
+     "ok": false,
+     "answer": "14"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "372"
+    },
+    {
+     "cat": "math",
+     "ok": true,
+     "answer": "Here's how to calculate the arrival time:\n\n1. **Starting Time:** 09:45\n2. **Trip Duration:** 2 hours 50 minutes\n\n**Step 1: Add the hours**\n$09:45 + 2 \\text{ hours} = 11:45$\n\n**Step 2: Add the minutes**\n$11:45 + 50 \\text{ minutes}$\n\n*   From 11:45 to 12:00 is 15 minutes.\n*   Remaining minutes to add:"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "Chen"
+    },
+    {
+     "cat": "logic",
+     "ok": true,
+     "answer": "No"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "{\"name\": \"Priya\", \"city\": \"Pune\", \"year\": \"2019\"}"
+    },
+    {
+     "cat": "extract",
+     "ok": true,
+     "answer": "23,29,31,37"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "BLUE WIDE DEEP"
+    },
+    {
+     "cat": "follow",
+     "ok": true,
+     "answer": "ananab"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "```python\ndef is_palindrome(s):\n    filtered_chars = [char.lower() for char in s if char.isalpha()]\n    return \"\".join(filtered_chars) == \"\".join(filtered_chars[::-1])\n```"
+    },
+    {
+     "cat": "code",
+     "ok": true,
+     "answer": "```python\ndef second_largest(nums):\n    \"\"\"\n    Returns the second largest distinct value in a list of numbers, or None if it doesn't exist.\n    \"\"\"\n    if not nums:\n        return None\n\n    # Get distinct elements and sort them in descending order\n    distinct_sorted = sorted(list(set(nums)), rever"
+    },
+    {
+     "cat": "reason",
+     "ok": false,
+     "answer": "9"
+    }
+   ]
+  }
+ ]
+}
