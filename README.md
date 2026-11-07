@@ -6,10 +6,10 @@ Channel: https://www.youtube.com/channel/UCR1YydvrN6VTtWUGHH2mTSg (playlist "Bui
 
 | Folder | Episode | What's inside |
 |---|---|---|
-| [ep01-design](ep01-design) | [Ep 1: Design](https://youtu.be/xFcJaLkPAKo) | The design brief, and a small local agent that drives FigCraft over MCP, with its task prompts |
+| [ep01-design](ep01-design) | [Ep 1: Design](https://youtu.be/xFcJaLkPAKo) | The design brief, and the prompts I gave a local model to drive FigCraft |
 | [ep02-agent-setup](ep02-agent-setup) | [Ep 2: OpenCode + Ollama agents](https://youtu.be/7I02-5ohqOo) | Ollama Modelfiles (128k context), the OpenCode config (models, image input, MCP servers) |
-| [ep03-agent-team](ep03-agent-team) | [Ep 3: A team of 12 local AI agents](https://youtu.be/L1yxuCVJEho) | The 12 agent files, AGENTS.md, the skills, and the decision gate (Qwen judge vs CLM-8B) |
-| [ep04-frontend-1](ep04-frontend-1) | [Ep 4: Local AI builds the frontend](https://youtu.be/ygrqkF7pN4g) | Every prompt as a run script, the app design brief, the design-token checker |
+| [ep03-agent-team](ep03-agent-team) | [Ep 3: A team of 12 local AI agents](https://youtu.be/L1yxuCVJEho) | The 12 agent files, AGENTS.md, the skills, and the judge prompt that picks the next agent |
+| [ep04-frontend-1](ep04-frontend-1) | [Ep 4: Local AI builds the frontend](https://youtu.be/ygrqkF7pN4g) | Every prompt as a run script, and the app design brief the agents read |
 | [ep05-frontend-2](ep05-frontend-2) | Ep 5: Animations, tests, accessibility, speed | Run scripts for the race animation, form states, tests, accessibility and performance |
 | [ep06-backend-1](ep06-backend-1) | Ep 6: Backend part 1, Postgres + a database | Postgres and npm installs, the API design and contract prompts, the contract the model wrote |
 

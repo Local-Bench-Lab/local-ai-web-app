@@ -13,4 +13,3 @@ Video: https://youtu.be/ygrqkF7pN4g
 
 Also here:
 - `app-design-brief.md`: what the pages should look like and do, which the agents read.
-- `check_tokens.py`: my checker for the design tokens (25 of 25 matched the Ep 1 design).
