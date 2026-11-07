@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama on the GB10",
+      "options": { "baseURL": "http://172.17.0.1:11434/v1" },
+      "models": {
+        "qwen3.8-128k": {"name": "Qwen 3.8 27B (128k)", "modalities": {"input": ["text", "image"], "output": ["text"]}},
+        "gemma4-31b-128k": {"name": "Gemma 4 31B (128k)", "modalities": {"input": ["text", "image"], "output": ["text"]}},
+        "gemma4-128k": {"name": "Gemma 4 8B (128k)", "modalities": {"input": ["text", "image"], "output": ["text"]}},
+        "gpt-oss-128k": {"name": "gpt-oss 120B (128k)"},
+        "qwen3.8-8k": {"name": "Qwen 3.8 27B (8k, too small)"}
+      }
+    }
+  },
+  "model": "ollama/qwen3.8-128k",
+  "mcp": {
+    "figcraft": {
+      "type": "local",
+      "command": ["/config/.local/bin/figcraft-cli", "mcp", "--attach", "47801"],
+      "enabled": true
+    },
+    "chrome": {
+      "type": "local",
+      "command": ["/config/apps/mcp/node_modules/.bin/chrome-devtools-mcp",
+                  "--executablePath=/usr/bin/google-chrome", "--chromeArg=--no-sandbox",
+                  "--viewport=1280x800", "--isolated",
+                  "--no-usage-statistics", "--no-performance-crux",
+                  "--screenshotFormat=jpeg", "--screenshotMaxWidth=1280"],
+      "environment": {"DISPLAY": ":99"},
+      "enabled": true
+    }
+  }
+}

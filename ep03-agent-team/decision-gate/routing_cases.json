@@ -1,0 +1,27 @@
+{
+  "written": "2026-10-19, before any model was run",
+  "question": "Which agent should run next?",
+  "actions": {
+    "design-reader": "Read exact styles, sizes and prototype links from the FigCraft design file",
+    "visual-checker": "Take screenshots of the page at phone, tablet and desktop width and look for layout problems",
+    "react-reviewer": "Review React component code: props, hooks, state and file structure",
+    "css-reviewer": "Review CSS: design tokens instead of raw values, responsive media queries",
+    "test-engineer": "Write or fix unit tests and run them",
+    "a11y-perf-auditor": "Run an accessibility and performance audit (Lighthouse, performance trace)",
+    "security-reviewer": "Review backend code for input validation, injection and secrets",
+    "contract-checker": "Check that frontend types and backend API responses match",
+    "done": "Nothing left to check for this step; move on to the next plan step"
+  },
+  "cases": [
+    {"id": 1, "state": "The developer changed Button.module.css: new hover colours and padding written as raw hex values and pixel numbers.", "expected": "css-reviewer"},
+    {"id": 2, "state": "A screenshot of the Home page at 390 px wide shows the headline text cut off on the right edge.", "expected": "visual-checker"},
+    {"id": 3, "state": "A new Vitest file Leaderboard.test.tsx was added and 2 of its 5 tests are failing.", "expected": "test-engineer"},
+    {"id": 4, "state": "A new backend route POST /requests was added that takes name, email and model from the form body and writes them to Postgres.", "expected": "security-reviewer"},
+    {"id": 5, "state": "Before building the Nav component, the developer needs the exact accent colour, font size and spacing used in the design.", "expected": "design-reader"},
+    {"id": 6, "state": "The frontend's LeaderboardRow type expects tokPerSec as a number, but the API now returns tok_per_sec as a string.", "expected": "contract-checker"},
+    {"id": 7, "state": "Leaderboard.tsx now fetches data inside a useEffect with no dependency array and stores it in three separate useState hooks.", "expected": "react-reviewer"},
+    {"id": 8, "state": "The leaderboard race animation feels janky on a slow phone and the page takes 4 seconds to show the largest image.", "expected": "a11y-perf-auditor"},
+    {"id": 9, "state": "The Card component was finished; lint, typecheck and tests pass and the screenshots at all three widths match the design.", "expected": "done"},
+    {"id": 10, "state": "The mobile menu drawer opens, but the close button has no label and keyboard focus is not moved into the drawer.", "expected": "a11y-perf-auditor"}
+  ]
+}

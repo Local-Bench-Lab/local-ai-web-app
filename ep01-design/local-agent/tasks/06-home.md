@@ -1,0 +1,9 @@
+Task 6 of 11 for "Bench Board": the Home page and its load-animation start state. Use list_layers to get component ids (Nav, Logo, Button, Card, Race). Pages go in a row at y 1900; each desktop page is a frame 1440×1024 with fill bg, vertical auto layout, clip on. Put a Nav instance (sizingH fill) at the top of each page and pick its variant with instance.setProperties {Page: ...}.
+
+1. "Home" at x 1640 (Nav Page=Home). Below the nav: a vertical frame "hero" (padding 96 80 64 80, gap 24, centred, fills width, hugs height, no fill) with a Logo instance resized to 64×64, text "headline" = "Every local AI model, tested on one desk." (H1, colour text, centred), text "subline" = "Speed, smarts and memory, measured live on an NVIDIA DGX Spark GB10." (Body, muted, centred) and a Button instance. Then a vertical frame "latest" (padding 24 80 48 80, gap 24, fills width, no fill) with text "Latest tests" (H2) and a horizontal frame "cards" (gap 24, fills width) holding three Card instances that fill the width. Change the instances' texts (set_properties characters on the child layers): card 1 keep as is; card 2 chip "Vision" (chip fill m/qwen), title "Best vision model for the GB10", speed "10/10", score "Qwen 3.8", date "18 Oct 2026"; card 3 chip "PS5" (chip fill m/gptoss), title "Jailbroken PS5 vs DGX Spark", speed "23 tok/s", score "Qwen 27B", date "17 Oct 2026". Last, a text "footer" = "Made with local tools only · Local Bench Lab" (Small, muted, centred, fills width).
+2. "Home – start" at x 0: duplicate Home (edit.duplicate), move it to x 0, rename it, and in the copy set hero opacity 0 and paddingTop 136, latest opacity 0 and paddingTop 64, footer opacity 0. This is the before-state of the load animation.
+
+## Checks
+- exists: Home, Home – start
+- in Home: hero, headline, subline, latest, cards, footer
+- in Home – start: hero, latest, footer
