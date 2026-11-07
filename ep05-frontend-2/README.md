@@ -79,6 +79,7 @@ npm run typecheck && npm run lint && npm test
 ## Results in the video
 
 - **The race, first try:** 93 minutes and no code. Qwen's last answer hit the 32,000-token limit for one reply before it wrote anything.
+- **The race, second try (three small prompts):** the bars grow in 76 minutes (Qwen wrote the file after 17 minutes, 49/49 tests). The reorder took 132 minutes: it still thought for about 93,000 tokens before its first edit, but no single answer hit the limit, so it got to the code; it fixed two type errors and a failing test (52/52). The details card took 53 minutes (60/60). Reduced motion shows the end state at once. A reboot cut the first try at part 2, so part 2 was run again.
 - **Form states, mobile drawer, home fade-in:** done in 66 minutes, with 39/39 tests.
 - **Visual check:** Gemma 4 listed problems, and Qwen measured each one in Chrome. None of the 6 problems it checked was real, so always check the checker.
 - **Tests:** no new tests, because the features it was asked to test hadn't been built yet. It also installed a coverage tool without asking.
